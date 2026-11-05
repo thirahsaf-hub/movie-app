@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+    <button onclick="location.href='index.html'">
+        Home
+    </button>
+
+    <button onclick="location.href='movies.html'">
+        Movies
+    </button>
+
+    <button onclick="location.href='payment.html'">
+        Payment
+    </button>
+
+    <button onclick="location.href='history.html'">
+        History
+    </button>
+</nav>
+
+<h1>Movie Payment</h1>
+
+<div id="movieInfo"></div>
+
+<br>
+
+<label>Name</label>
+<input type="text" id="customer">
+
+<br><br>
+
+<label>Payment Method</label>
+
+<select id="paymentMethod">
+
+    <option>TNG</option>
+
+    <option>Online Banking</option>
+
+    <option>Credit Card</option>
+
+</select>
+
+<br><br>
+
+<button onclick="makePayment()">
+
+    Confirm Payment
+
+</button>
+
+<script src="payment.js"></script>
+
+</body>
+</html>

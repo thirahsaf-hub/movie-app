@@ -1,0 +1,294 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:
+    linear-gradient(
+        180deg,
+        #09090f 0%,
+        #120a22 40%,
+        #050505 100%
+    );
+
+    color:white;
+    min-height:100vh;
+    padding:20px;
+}
+
+/* NAVIGATION */
+
+nav{
+    display:flex;
+    gap:15px;
+    margin-bottom:30px;
+}
+
+nav button{
+
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+nav button:hover{
+
+    background:#7d3cff;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 0 15px #7d3cff;
+}
+
+/* TITLES */
+
+h1{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+    background:linear-gradient(
+        90deg,
+        white,
+        #b88fff
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+h2,h3{
+    margin:15px 0;
+}
+
+/* SEARCH */
+
+input{
+
+    width:300px;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#1c1c25;
+
+    color:white;
+}
+
+input:focus{
+
+    outline:none;
+
+    border:1px solid #7d3cff;
+}
+
+/* BUTTON */
+
+button{
+
+    background:#7d3cff;
+
+    border:none;
+
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+button:hover{
+
+    background:#955dff;
+
+    box-shadow:0 0 15px #7d3cff;
+}
+
+/* MOVIE CARD */
+
+.movie-card{
+
+    margin-top:30px;
+
+    width:260px;
+
+    background:
+    rgba(255,255,255,0.06);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    padding:15px;
+
+    border-radius:18px;
+
+    transition:0.3s;
+}
+
+.movie-card:hover{
+
+    transform:scale(1.04);
+
+    box-shadow:
+    0 0 25px rgba(125,60,255,0.35);
+}
+
+.movie-card img{
+
+    width:100%;
+
+    border-radius:15px;
+}
+
+.movie-card h3{
+
+    margin-top:15px;
+}
+
+/* DASHBOARD */
+
+.dashboard{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-top:20px;
+}
+
+.box{
+
+    width:250px;
+
+    background:
+    rgba(255,255,255,0.05);
+
+    backdrop-filter:blur(12px);
+
+    padding:25px;
+
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.box h2{
+
+    color:#b88fff;
+
+    font-size:32px;
+}
+
+/* TRANSACTION CARD */
+
+.transaction-card{
+
+    margin-top:15px;
+
+    background:
+    rgba(255,255,255,0.05);
+
+    border-radius:15px;
+
+    padding:20px;
+
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+/* CATEGORY BUTTONS */
+
+.categories{
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    margin-top:20px;
+}
+
+.categories button{
+
+    background:#1d1d28;
+}
+
+.hero{
+
+    height:350px;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.2),
+        rgba(0,0,0,0.8)
+    ),
+    url("images/dune-banner.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    margin-bottom:30px;
+}
+
+.movie-row{
+
+    display:flex;
+
+    gap:15px;
+
+    overflow-x:auto;
+
+    margin-bottom:40px;
+}
+
+.movie-row img{
+
+    width:180px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.movie-row img:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:
+    0 0 25px rgba(125,60,255,0.4);
+}

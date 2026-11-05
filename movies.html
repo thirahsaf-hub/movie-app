@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Movie Search</h1>
+
+<nav>
+    <button onclick="location.href='index.html'">
+        Home
+    </button>
+
+    <button onclick="location.href='movies.html'">
+        Movies
+    </button>
+
+    <button onclick="location.href='payment.html'">
+        Payment
+    </button>
+
+    <button onclick="location.href='history.html'">
+        History
+    </button>
+</nav>
+
+<br><br>
+
+<input
+type="text"
+id="searchData"
+placeholder="Enter movie title">
+
+<button onclick="buttonClicked()">
+    Search
+</button>
+
+<br><br>
+
+<div id="movieResult"></div>
+
+<script src="fetch.js"></script>
+
+</body>
+</html>

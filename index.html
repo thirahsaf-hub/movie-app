@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MyMovie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>🎬 MyMovie</h1>
+
+    <hr>
+
+    <nav>
+    <button onclick="location.href='index.html'">Home</button>
+
+    <button onclick="location.href='movies.html'">
+        Movies
+    </button>
+
+    <button onclick="location.href='payment.html'">
+        Payment
+    </button>
+
+    <button onclick="location.href='history.html'">
+        History
+    </button>
+</nav>
+
+<!-- HERO BANNER -->
+
+<div class="hero">
+
+    <h1>Dune: Part Two</h1>
+
+    <p>
+        Stream the biggest blockbuster of the year.
+    </p>
+
+</div>
+
+<!-- CONTINUE WATCHING -->
+
+<h2>Continue Watching</h2>
+
+<div id="continueWatching"></div>
+
+<!-- TRENDING -->
+
+<h2>Trending Now</h2>
+
+<div class="movie-row">
+
+    <img src="images/dune.jpg">
+
+    <img src="images/batman.jpg">
+
+    <img src="images/joker.jpg">
+
+    <img src="images/oppenheimer.jpg">
+
+</div>
+
+<!-- HORROR -->
+
+<h2>Horror</h2>
+
+<div class="movie-row">
+
+    <img src="images/conjuring.jpg">
+
+    <img src="images/conjuring.jpg">
+
+    <img src="images/conjuring.jpg">
+
+</div>
+
+<!-- COMEDY -->
+
+<h2>Comedy</h2>
+
+<div class="movie-row">
+
+    <img src="images/hangover.jpg">
+
+    <img src="images/hangover.jpg">
+
+    <img src="images/hangover.jpg">
+
+</div>
+
+<script>
+
+window.onload = function(){
+
+    let transactions =
+    JSON.parse(
+        localStorage.getItem("transactions")
+    ) || [];
+
+    let output =
+    '<div class="movie-row">';
+
+    transactions.forEach(function(movie){
+
+        if(movie.poster){
+
+            output += `
+                <img src="${movie.poster}">
+            `;
+        }
+    });
+
+    output += "</div>";
+
+    document.getElementById(
+        "continueWatching"
+    ).innerHTML = output;
+}
+
+</script>
+
+</body>
+</html>
