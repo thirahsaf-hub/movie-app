@@ -5,11 +5,11 @@ window.onload = function(){
         localStorage.getItem("selectedMovie")
     );
 
-    document.getElementById("movieInfo").innerHTML =
+    console.log(movie); // ADD THIS
 
+    document.getElementById("movieInfo").innerHTML =
     `
         <h3>${movie.title}</h3>
-
         <p>Price : RM10</p>
     `;
 }
@@ -45,6 +45,7 @@ function makePayment(){
 
     transactions.push(transaction);
 
+    //local storage for every transactions
     localStorage.setItem(
 
         "transactions",

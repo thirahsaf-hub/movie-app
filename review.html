@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Reviews</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+
+        <button onclick="location.href='index.html'">Home</button>
+
+        <button onclick="location.href='watchlist.html'">Watchlist</button>
+
+        <button onclick="location.href='payment.html'">Payment</button>
+
+        <button onclick="location.href='history.html'">History</button>
+
+    </nav>
+
+    <hr>
+
+    <h1>Movie Reviews</h1>
+
+    <h3>Add Review</h3>
+
+    <input type="text" id="movieTitle" placeholder="Movie Title">
+
+    <br><br>
+
+    <label>Rating</label>
+
+    <select id="rating">
+
+        <option value="1">1 ⭐</option>
+        <option value="2">2 ⭐</option>
+        <option value="3">3 ⭐</option>
+        <option value="4">4 ⭐</option>
+        <option value="5">5 ⭐</option>
+
+    </select>
+
+    <br><br>
+
+    <textarea id="reviewText" rows="5" cols="40" placeholder="Write your review..."></textarea>
+
+    <br><br>
+
+    <button onclick="saveReview()">
+        Save Review
+    </button>
+
+    <hr>
+
+    <h2>My Reviews</h2>
+
+    <div id="reviewContainer"></div>
+
+    <h3 id="averageRating"></h3>
+
+    <script src="review.js"></script>
+
+</body>
+</html>

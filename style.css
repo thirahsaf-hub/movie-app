@@ -9,9 +9,9 @@ body{
     background:
     linear-gradient(
         180deg,
-        #09090f 0%,
-        #120a22 40%,
-        #050505 100%
+        #1c1c1c 0%,
+        #0d0d0d 40%,
+        #000000 100%
     );
 
     color:white;
@@ -46,11 +46,11 @@ nav button{
 
 nav button:hover{
 
-    background:#7d3cff;
+    background:#3f3f3f;
 
     transform:translateY(-2px);
 
-    box-shadow:0 0 15px #7d3cff;
+    box-shadow:0 0 15px #2a2a2a;
 }
 
 /* TITLES */
@@ -63,8 +63,9 @@ h1{
 
     background:linear-gradient(
         90deg,
-        white,
-        #b88fff
+        rgb(234, 234, 235),
+        #f2eff7,
+        #eee6fc
     );
 
     -webkit-background-clip:text;
@@ -73,6 +74,11 @@ h1{
 
 h2,h3{
     margin:15px 0;
+}
+
+hr{
+    margin-top:5px;
+    margin-bottom:10px;
 }
 
 /* SEARCH */
@@ -96,16 +102,16 @@ input:focus{
 
     outline:none;
 
-    border:1px solid #7d3cff;
+    border:1px solid #666568;
 }
 
 /* BUTTON */
 
 button{
 
-    background:#7d3cff;
+    background:#7f7e80;
 
-    border:none;
+    border:1px solid #363434;
 
     color:white;
 
@@ -120,9 +126,9 @@ button{
 
 button:hover{
 
-    background:#955dff;
+    background:#c7c6c8;
 
-    box-shadow:0 0 15px #7d3cff;
+    box-shadow:0 0 15px #545354;
 }
 
 /* MOVIE CARD */
@@ -152,7 +158,7 @@ button:hover{
     transform:scale(1.04);
 
     box-shadow:
-    0 0 25px rgba(125,60,255,0.35);
+    0 0 25px rgba(39, 38, 39, 0.35);
 }
 
 .movie-card img{
@@ -196,7 +202,7 @@ button:hover{
 
 .box h2{
 
-    color:#b88fff;
+    color:#404040;
 
     font-size:32px;
 }
@@ -235,6 +241,7 @@ button:hover{
     background:#1d1d28;
 }
 
+/*BANNER*/
 .hero{
 
     height:350px;
@@ -254,7 +261,7 @@ button:hover{
         rgba(0,0,0,0.2),
         rgba(0,0,0,0.8)
     ),
-    url("images/dune-banner.jpg");
+    url("avatar.jpg");
 
     background-size:cover;
 
@@ -290,5 +297,61 @@ button:hover{
     transform:scale(1.08);
 
     box-shadow:
-    0 0 25px rgba(125,60,255,0.4);
+    0 0 25px rgba(173, 173, 173, 0.4);
+}
+
+select{
+
+    width:100%;
+
+    padding:12px;
+
+    background:#1d162c;
+
+    color:white;
+
+    border:1px solid #919191;
+
+    border-radius:10px;
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:20px;
+
+    background:
+    rgba(255,255,255,0.05);
+
+    border-radius:15px;
+
+    overflow:hidden;
+}
+
+th{
+
+    background:#7d3cff;
+
+    color:white;
+
+    padding:15px;
+}
+
+td{
+
+    padding:12px;
+
+    border-bottom:
+    1px solid rgba(255,255,255,0.1);
+
+    text-align:center;
+}
+
+tr:hover{
+
+    background:
+    rgba(255,255,255,0.05);
 }

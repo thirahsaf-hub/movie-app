@@ -5,57 +5,48 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <nav>
-    <button onclick="location.href='index.html'">
-        Home
-    </button>
 
-    <button onclick="location.href='movies.html'">
-        Movies
-    </button>
+        <button onclick="location.href='index.html'">Home</button>
 
-    <button onclick="location.href='payment.html'">
-        Payment
-    </button>
+        <button onclick="location.href='watchlist.html'">Watchlist</button>
 
-    <button onclick="location.href='history.html'">
-        History
-    </button>
-</nav>
+        <button onclick="location.href='history.html'">History</button>
 
-<h1>Movie Payment</h1>
+        <button onclick="location.href='review.html'">Reviews</button>
 
-<div id="movieInfo"></div>
+    </nav>
+    <h1>Movie Payment</h1>
 
-<br>
+    <div id="movieInfo"></div>
 
-<label>Name</label>
-<input type="text" id="customer">
+    <br>
 
-<br><br>
+    <label>Name</label>
+    <input type="text" id="customer">
 
-<label>Payment Method</label>
+    <br><br>
 
-<select id="paymentMethod">
+        <div id="movieInfo"></div>
 
-    <option>TNG</option>
+        <br>
 
-    <option>Online Banking</option>
+        <select id="paymentMethod">
 
-    <option>Credit Card</option>
+            <option>TNG eWallet</option>
+            <option>Online Banking</option>
+            <option>Credit Card</option>
 
-</select>
+        </select>
 
-<br><br>
+        <br><br>
 
-<button onclick="makePayment()">
+        <button onclick="makePayment()">
+            Confirm Payment
+        </button>
 
-    Confirm Payment
 
-</button>
-
-<script src="payment.js"></script>
+    <script src="payment.js"></script>
 
 </body>
 </html>

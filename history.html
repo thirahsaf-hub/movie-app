@@ -3,35 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <title>Transaction History</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <nav>
+
     <button onclick="location.href='index.html'">
         Home
     </button>
 
-    <button onclick="location.href='movies.html'">
-        Movies
+    <button onclick="location.href='watchlist.html'">
+        Watchlist
     </button>
 
     <button onclick="location.href='payment.html'">
         Payment
     </button>
 
-    <button onclick="location.href='history.html'">
-        History
+    <button onclick="location.href='review.html'">
+        Reviews
     </button>
+
 </nav>
 
 <hr>
 
 <h1>Transaction History</h1>
 
-<div id="transactionList"></div>
+<table>
 
-<h3 id="totalRevenue"></h3>
+    <thead>
+
+        <tr>
+
+            <th>No.</th>
+
+            <th>Movie</th>
+
+            <th>Customer</th>
+
+            <th>Payment Method</th>
+
+            <th>Amount (RM)</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody id="transactionTable">
+
+    </tbody>
+
+</table>
+
+<br>
+
+<h2 id="totalMovies"></h2>
+
+<h2 id="totalRevenue"></h2>
 
 <script src="history.js"></script>
 
