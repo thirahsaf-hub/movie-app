@@ -1,23 +1,24 @@
 let currentMovie = null;
 
-function buttonClicked() {
+function buttonClicked() {// DOM manipulation
     let movieTitle = document.getElementById("searchData").value;
 
     // Error Handling 
-    if (movieTitle.trim() === "") {
-        document.getElementById("movieResult").innerHTML =
-            "<p>Please enter a movie title.</p>";
+    if (movieTitle.trim() === "") { // check if search box is empty
+        document.getElementById("movieResult").innerHTML = 
+            "<p>Please enter a movie title.</p>"; //if it is empty, it will show this
         return;
     }
 
     //Sending request to OMDb API to use movie titles
     fetch(`https://www.omdbapi.com/?t=${encodeURIComponent(movieTitle)}&apikey=fffa4ed2`)
+        //convert api into javascript object
         .then(response => response.json())
         // Response process
         .then(data => {
             // Error Handling 
             if (data.Response === "False") {
-                document.getElementById("movieResult").innerHTML =
+                document.getElementById("movieResult").innerHTML = //dom manipulation
                     `<p>${data.Error || "Movie Not Found."}</p>`;
                 return;
             }
@@ -36,9 +37,10 @@ function buttonClicked() {
                 JSON.stringify(currentMovie)
             );
 
-            // Suggestion Conditions
+            // Suggestion Logic
             let recommendation = getRecommendationByGenre(data.Genre);
 
+            //display result
             document.getElementById("movieResult").innerHTML = `
                 <div class="movie-card">
                     <img src="${data.Poster !== "N/A" ? data.Poster : "placeholder.jpg"}" width="200" alt="${data.Title}">
@@ -112,7 +114,7 @@ function suggestByCategory() {
     };
 
     //If user dont choose from dropdown
-    if (selectedCategory === "") {
+    if (selectedCategory === "") { //update page
         resultDiv.innerHTML = "<p>Please select a category to view a recommendation.</p>";
         return;
     }
@@ -123,7 +125,7 @@ function suggestByCategory() {
     if (suggestedTitle) {
         document.getElementById("searchData").value = suggestedTitle;
         buttonClicked();
-    } else {
+    } else { //if category does not exist
         resultDiv.innerHTML = `<p>No recommendation currently available for <strong>${selectedCategory}</strong>.</p>`;
     }
 }
@@ -152,5 +154,5 @@ function addWatchlist() {
 
     //local storage of waitlisted movies
     localStorage.setItem("watchlist", JSON.stringify(watchlist));
-    alert("Movie added to watchlist!");
+    alert("Movie added to watchlist!");//error handling
 }

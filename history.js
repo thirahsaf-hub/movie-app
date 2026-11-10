@@ -35,7 +35,7 @@ function displayTransactions() {
     ).innerHTML =
 
     "Movies Purchased : " +
-    transactions.length;
+    transactions.length; //calculate total movies purchased
 
     document.getElementById(
         "totalRevenue"

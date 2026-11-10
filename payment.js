@@ -3,7 +3,7 @@ window.onload = function(){
     let movie =
     JSON.parse(
         localStorage.getItem("selectedMovie")
-    );
+    ); //retrieve movie
 
     console.log(movie); // ADD THIS
 
@@ -43,7 +43,7 @@ function makePayment(){
     amount:10
 };
 
-    transactions.push(transaction);
+    transactions.push(transaction); //add new transaction into the array
 
     //local storage for every transactions
     localStorage.setItem(
@@ -54,7 +54,7 @@ function makePayment(){
 
     );
 
-    alert("Payment Successful");
+    alert("Payment Successful"); //event handling
 
     location.href = "history.html";
 }

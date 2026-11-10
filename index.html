@@ -10,7 +10,7 @@
         <h1>HBO MIN</h1>
 
         <nav>
-
+        <!--Event handling-->
             <button onclick="location.href='watchlist.html'">
                 Watchlist
             </button>
@@ -34,13 +34,10 @@
 
     <!-- Search & Filter Section -->
     <div class="search-section">
-        <input
-            type="text"
-            id="searchData"
-            placeholder="Search movie title...">
+        <input type="text" id="searchData" placeholder="Search movie title...">
 
-        <!-- Genre Dropdown Selector -->
-        <select id="genreSelect" onchange="suggestByCategory()">
+        <!-- Genre Dropdown Menu -->
+        <select id="genreSelect" onchange="suggestByCategory()"><!--Event handling-->
             <option value="">-- Select Category / Genre --</option>
             <option value="Action">Action</option>
             <option value="Comedy">Comedy</option>
@@ -63,7 +60,7 @@
 
     <br>
 
-    <!-- HERO BANNER -->
+    <!-- BANNER -->
 
     <div class="hero">
 
@@ -73,7 +70,7 @@
 
     </div>
 
-    <!-- CONTINUE WATCHING -->
+    <!-- Purchased movie appear as continue watching -->
 
     <h2>Continue Watching</h2>
 
@@ -123,17 +120,18 @@
 
     </div>
 
-     <script src="fetch.js"></script>
+    <script src="fetch.js"></script>
 
     <script>
 
-// Get all the purchased movies into Continue Watching section 
+
     window.onload = function(){
 
         let transactions =
-        JSON.parse(
+        //Convert string into Javascript array
+        JSON.parse( 
             localStorage.getItem("transactions")
-        ) || [];
+        ) || []; //if nothing exist, then empty array will be created
 
         let output =
         '<div class="movie-row">';

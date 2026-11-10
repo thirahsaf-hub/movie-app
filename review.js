@@ -1,14 +1,14 @@
 let reviews =
 JSON.parse(
     localStorage.getItem("reviews")
-) || [];
+) || []; //retrieve existing reviews
 
 let editIndex = -1;
 
-function saveReview(){
+function saveReview(){ //create and update
 
     let title =
-    document.getElementById("movieTitle").value;
+    document.getElementById("movieTitle").value; 
 
     let rating =
     document.getElementById("rating").value;
@@ -16,7 +16,7 @@ function saveReview(){
     let review =
     document.getElementById("reviewText").value;
 
-    if(title == "" || review == ""){
+    if(title == "" || review == ""){ //prevent empty submissions
 
         alert("Please fill all fields");
 
@@ -39,7 +39,7 @@ function saveReview(){
 
     }
     else{
-
+        //replace old review
         reviews[editIndex] = reviewData;
 
         editIndex = -1;
@@ -57,7 +57,7 @@ function saveReview(){
     clearForm();
 }
 
-function displayReviews(){
+function displayReviews(){//read
 
     let output = "";
 
@@ -96,24 +96,24 @@ function displayReviews(){
 function editReview(index){
 
     let item = reviews[index];
-
+    //update title
     document.getElementById("movieTitle").value =
     item.title;
-
+    //update rating
     document.getElementById("rating").value =
     item.rating;
-
+    //update review
     document.getElementById("reviewText").value =
     item.review;
 
     editIndex = index;
 }
 
-function deleteReview(index){
+function deleteReview(index){//delete
 
     reviews.splice(index,1);
 
-    localStorage.setItem(
+    localStorage.setItem(//update local storage
 
         "reviews",
 

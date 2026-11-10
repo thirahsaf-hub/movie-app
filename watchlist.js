@@ -1,9 +1,9 @@
 let watchlist =
 JSON.parse(
     localStorage.getItem("watchlist")
-) || [];
+) || []; //retrieve saved movies from local storage
 
-function displayWatchlist(){
+function displayWatchlist(){ //read operation
 
     let output = "";
 
@@ -21,8 +21,7 @@ function displayWatchlist(){
 
             <p>${movie.rating}</p>
 
-
-            <button onclick="deleteMovie(${index})">
+            <button onclick="deleteMovie(${index})"> 
                 Delete
             </button>
 
@@ -36,18 +35,18 @@ function displayWatchlist(){
     ).innerHTML = output;
 }
 
-function deleteMovie(index){
+function deleteMovie(index){//delete operation
 
     watchlist.splice(index,1);
 
     localStorage.setItem(
         "watchlist",
-        JSON.stringify(watchlist)
+        JSON.stringify(watchlist)//save updated
     );
 
     displayWatchlist();
 }
 
-
+//event handling
 window.onload =
 displayWatchlist;
