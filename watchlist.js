@@ -32,7 +32,7 @@ function displayWatchlist(){ //read operation
 
     document.getElementById(
         "watchlistContainer"
-    ).innerHTML = output;
+    ).innerHTML = output; //dom
 }
 
 function deleteMovie(index){//delete operation

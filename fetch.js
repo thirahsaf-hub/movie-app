@@ -40,7 +40,7 @@ function buttonClicked() {// DOM manipulation
             // Suggestion Logic
             let recommendation = getRecommendationByGenre(data.Genre);
 
-            //display result
+            //display result (dom manipulation)
             document.getElementById("movieResult").innerHTML = `
                 <div class="movie-card">
                     <img src="${data.Poster !== "N/A" ? data.Poster : "placeholder.jpg"}" width="200" alt="${data.Title}">
@@ -114,7 +114,7 @@ function suggestByCategory() {
     };
 
     //If user dont choose from dropdown
-    if (selectedCategory === "") { //update page
+    if (selectedCategory === "") { //error handling
         resultDiv.innerHTML = "<p>Please select a category to view a recommendation.</p>";
         return;
     }
@@ -123,7 +123,7 @@ function suggestByCategory() {
     let suggestedTitle = genreSuggestions[selectedCategory];
 
     if (suggestedTitle) {
-        document.getElementById("searchData").value = suggestedTitle;
+        document.getElementById("searchData").value = suggestedTitle; //dom manipulation
         buttonClicked();
     } else { //if category does not exist
         resultDiv.innerHTML = `<p>No recommendation currently available for <strong>${selectedCategory}</strong>.</p>`;
@@ -136,7 +136,7 @@ function goPayment() {
 
 function addWatchlist() {
     if (!currentMovie) {
-        alert("No movie selected!");
+        alert("No movie selected!"); //error handling
         return;
     }
 
